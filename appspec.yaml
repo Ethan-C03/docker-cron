@@ -1,0 +1,33 @@
+alerts:
+- rule: DEPLOYMENT_FAILED
+- rule: DOMAIN_FAILED
+name: parcelforce-tracking
+region: lon
+features:
+- buildpack-stack=ubuntu-22
+functions:
+- github:
+    branch: main
+    deploy_on_push: true
+    repo: Ethan-C03/parcelforce-branded-tracking
+  name: parcelforce-tracking
+  source_dir: /
+ingress:
+  rules:
+  - component:
+      name: parcelforce-tracking
+    match:
+      path:
+        prefix: /
+name: parcelforce-tracking
+region: lon
+workers:
+- dockerfile_path: Dockerfile
+  github:
+    branch: main
+    deploy_on_push: true
+    repo: Ethan-C03/docker-cron
+  instance_count: 1
+  instance_size_slug: basic-xxs
+  name: docker-cron
+  source_dir: /
