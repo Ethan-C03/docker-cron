@@ -3,5 +3,4 @@
 env >> /etc/environment
 
 # execute CMD
-curl https://faas-lon1-917a94a7.doserverless.co/api/v1/web/fn-23a745ff-e4a3-4c8f-8464-e256f38fd2fd/parcelforce/tracking
 exec "$@"
