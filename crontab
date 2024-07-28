@@ -1,3 +1,3 @@
-* * * * * curl https://faas-lon1-917a94a7.doserverless.co/api/v1/web/fn-23a745ff-e4a3-4c8f-8464-e256f38fd2fd/parcelforce/tracking -k >/proc/1/fd/1 2>/proc/1/fd/2
+30 * * * * curl https://faas-lon1-917a94a7.doserverless.co/api/v1/web/fn-23a745ff-e4a3-4c8f-8464-e256f38fd2fd/parcelforce/tracking -k >/proc/1/fd/1 2>/proc/1/fd/2
 
 # An empty line is required at the end of this file for a valid cron file.

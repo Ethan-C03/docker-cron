@@ -18,13 +18,6 @@ services:
   - path: /
   run_command: yarn start
   source_dir: /
-functions:
-- github:
-    branch: main
-    deploy_on_push: true
-    repo: Ethan-C03/parcelforce-branded-tracking
-  name: parcelforce-tracking
-  source_dir: /
 ingress:
   rules:
   - component:
